@@ -11,7 +11,7 @@ import Post from "./Post";
 const Posts = () => {
   const { search } = useLocation();
   const [posts, setPosts] = useState([]);
-  useEffect(() => {
+  useEffect(() => { 
     const fetchData = async () => {
       console.log(search);
       let data = await getAllPosts(search);
@@ -23,7 +23,7 @@ const Posts = () => {
   }, [search]);
   return (
     <>
-      {posts.map((post) => (
+      {posts.map((post) => ( 
         <Grid item lg={3} sm={4} xs={12}>
           <NavLink
             to={`/details/${post._id}`}
